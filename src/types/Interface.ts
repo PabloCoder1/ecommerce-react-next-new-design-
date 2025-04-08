@@ -11,8 +11,18 @@ export interface Popup {
     btn1: string;
     btn2: string;
   }
-  export interface Login {
+  export interface BlueBlock {
     h1: string;
     p: string;
     btn: string;
+    move: boolean;
+    onButtonClick: () => void;
+  }
+  export interface FormBlock {
+    h1: string;
+    btn: string;
+    move: boolean;
+    onButtonClick: () => void;
+    showAllFields: boolean;
+    formHeight: string;
   }

@@ -1,7 +1,7 @@
 import styles from "./catalog.module.css";
-import Popup from "../components/Popup/page";
-import MainBar from "../components/MainBar/page";
-import SearchBox from "../components/SearchBox/page";
+import Popup from "../../components/Popup/page";
+import MainBar from "../../components/MainBar/page";
+import SearchBox from "../../components/SearchBox/page";
 
 const Catalog = () => {
   return (

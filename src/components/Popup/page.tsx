@@ -6,7 +6,7 @@ import { SiNamecheap, SiTyper } from "react-icons/si";
 import { GoFileDirectory } from "react-icons/go";
 import { MdOutlineDescription } from "react-icons/md";
 import { IoAdd } from "react-icons/io5";
-import { Popup } from "@/app/types/Interface";
+import { Popup } from "@/types/Interface";
 import { TbBrandReason } from "react-icons/tb";
 
 const PopupComponent = (props: Popup) => {
