@@ -26,3 +26,24 @@ export interface Popup {
     showAllFields: boolean;
     formHeight: string;
   }
+
+  export type User = {
+    ID: string;
+    email: string;
+    exp: number;
+    given_name: string;
+    iat: number;
+    name: string;
+    nbf: number;
+    role: string;
+  }
+
+  export interface Product {
+    id: string;
+    nome: string;
+    preco: number;
+    img: string;
+    descricao: string;
+    quantidade: number;
+    onClose: () => void;
+}

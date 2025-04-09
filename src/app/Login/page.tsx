@@ -7,7 +7,7 @@ import styles from "./Login.module.css";
 const Login = () => {
   const [moveBlueBar, setMoveBlueBar] = useState(false);
   const [showAllFields, setShowAllFields] = useState(true);
-  const [formHeight, setFormHeight] = useState("333.41px");
+  const [formHeight, setFormHeight] = useState("454.41px");
   const [info, setInfo] = useState({
     h1: "Welcome Back!",
     p: "To keep connected with us please login with your personal info",
@@ -33,7 +33,7 @@ const Login = () => {
     }, 350);
     setTimeout(() => {
       setShowAllFields((prevShow) => !prevShow);
-      setFormHeight((prevShow) => (prevShow === "333.41px" ? "153px" : "333.41px"));
+      setFormHeight((prevShow) => (prevShow === "454.41px" ? "399.41px" : "454.41px"));
     }, 350);
   };
 
