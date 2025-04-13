@@ -92,7 +92,7 @@ const Catalog = () => {
                     <h1>{product.nome}</h1>
                     <p>R$ {product.preco}</p>
                   </div>
-                  <button>Comprar</button>
+                  <button onClick={() => PostPedido(product)}>Comprar</button>
                 </div>
               ))}
             </>

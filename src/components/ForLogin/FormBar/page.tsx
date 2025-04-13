@@ -158,6 +158,8 @@ const FormBar = (props: FormBlock) => {
               <a href="#" onClick={ResetSenha}>Forgot your password?</a>
               <button onClick={ReqLogin}>{props.btn}</button>
             </form>
+
+            
           )}
         </div>
       </div>
@@ -167,3 +169,7 @@ const FormBar = (props: FormBlock) => {
 
 export default FormBar;
 
+    {/*<Popup h1='Cadastrar Produtos' img='none' nome= 'flex' valor= 'flex' file= 'flex' descricao= 'flex' type= 'none' motivo= 'none' quantidade= 'flex' btn1= 'Confirmar' btn2= ''/>
+      <Popup h1='Atualizar Item' img='none' nome= 'flex' valor= 'flex' file= 'flex' type= 'none' motivo= 'none' descricao= 'none' quantidade= 'flex' btn1= 'Atualizar' btn2= 'Fechar'/>
+      <Popup h1='Informações' img='flex' nome= 'flex' valor= 'flex' file= 'flex' type= 'none' motivo= 'none' descricao= 'none' quantidade= 'flex' btn1= 'Fechar' btn2= ''/>
+      <Popup h1='Movimentação' img='flex' nome= 'none' valor= 'none' file= 'none' type= 'flex ' motivo= 'flex' descricao= 'none' quantidade= 'flex' btn1= 'Fazer Movimentação' btn2= 'Fechar'/>*/}
