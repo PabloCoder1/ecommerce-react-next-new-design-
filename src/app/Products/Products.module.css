@@ -1,0 +1,17 @@
+.main {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 1462px;
+    height: 658.7px;
+    background: blue;
+}
+.container div h1{
+    color: #FFF;
+    font-size: 90px;
+}

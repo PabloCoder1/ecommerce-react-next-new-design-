@@ -7,11 +7,13 @@ import { useAuthStore } from "@/Store/authStore";
 import { Product } from "@/types/Interface";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { useRouter } from 'next/navigation'; // Importa o useRouter
 
-const Catalog = () => {
+const Catalog = (props: Product) => {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
+  const router = useRouter(); // Inicializa o useRouter
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -70,6 +72,11 @@ const Catalog = () => {
     console.log(response)
   }
 
+  async function handleButtonClick(id: string) {
+    // Redireciona para a página de produtos com o ID do produto
+    router.push(`/Products?id=${id}`);
+  }
+
   return (
     <>
       <main className={styles.main}>
@@ -84,10 +91,10 @@ const Catalog = () => {
           ) : (
             <>
               {products.map((product) => (
-                <div key={product.id} className={styles.content}>
+                <div key={product.id} className={styles.content} onClick={() => handleButtonClick(product.id)}>
                   <img
                     src={
-                      product?.img && typeof product.img === "string" && product.img.startsWith("data:image")? product.img: `data:image/png;base64,${product?.img || ""}`} alt={product?.nome || "Produto sem nome"}/>
+                      product?.img && typeof product.img === "string" && product.img.startsWith("data:image") ? product.img : `data:image/png;base64,${product?.img || ""}`} alt={product?.nome || "Produto sem nome"}/>
                   <div>
                     <h1>{product.nome}</h1>
                     <p>R$ {product.preco}</p>
