@@ -9,9 +9,79 @@
 .container{
     width: 1462px;
     height: 658.7px;
-    background: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.container div h1{
-    color: #FFF;
-    font-size: 90px;
+.container img{
+    width: 658.7px;
+    height: 658.7px;
+}
+.content{
+    width: 707.89px;
+    height: 647px;
+}
+.content h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #606060;
+    height: 43.53px;
+    width: 485.31px;
+}
+.content h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: #123D72;
+    width: 563.15px;
+    height: 71.24px;
+}
+.casing{
+    width: 707.89px;
+    height: 96.3px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.casing h1{
+    width: 192.18px;
+    height: 71.24px;
+    font-size: 36px;
+    color: #123D72;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 212.85px;
+    height: 46.17px;
+    display: flex;
+    font-size: 42.57px;
+}
+.star{
+    cursor: pointer;
+    color: #123D72;
+}
+.casing p{
+    width: 131.36px;
+    height: 39.58px;
+    font-size: 20px;
+    color: #606060;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    height: 39.58px;
+    width: 1px;
+    background: #000;
+}
+.content p{
+    width: 707.89px;
+    height: 167.54px;
+    font-size: 15px;
+    color: #606060;
+    background: red;
 }

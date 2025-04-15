@@ -5,6 +5,7 @@ import api from "@/services/api";
 import { Product } from "@/types/Interface";
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'next/navigation'; // Importa useSearchParams
+import { FaRegStar } from "react-icons/fa";
 
 const Products = () => {
   const searchParams = useSearchParams(); // Obtém os parâmetros da URL
@@ -18,10 +19,9 @@ const Products = () => {
       try {
         console.log(id);
         const res = await api.get(`/Produtos/ID/${id}`); // Use o ID obtido da URL
-        const data: Product = res.data; // Verifique a estrutura do objeto
-        console.log(data); // Verifique a estrutura do objeto
+        const data: Product = res.data[0]
         setProduct(data); // Define o produto recebido
-        console.log("Product set to:", data); // Verifique o que está sendo definido
+        console.log(data)
       } catch (error) {
         console.error("Erro na requisição:", error);
       } finally {
@@ -41,13 +41,31 @@ const Products = () => {
         <div className={styles.container}>
           {loading && <p>Carregando...</p>}
           {product ? ( // Verifica se product não é null
-            <div>
-              <h1>{product.nome}</h1>
-              <p>{product.descricao}</p>
-              <p>Preço: {product.preco}</p>
-            </div>
+            <>
+              <img src={product.img} alt="" />
+              <div className={styles.content}>
+                <h2>ID - {product.id}</h2>
+                <h2>Categoria do Produto - {product.categoria}</h2>
+                <h1>{product.nome}</h1>
+                <div className={styles.casing}>
+                  <h1>R$ {product.preco}</h1>
+                  <div className={styles.line}></div>
+                  <div className={styles.box}>
+                    <FaRegStar className={styles.star} />
+                    <FaRegStar className={styles.star} />
+                    <FaRegStar className={styles.star} />
+                    <FaRegStar className={styles.star} />
+                    <FaRegStar className={styles.star} />
+                  </div>
+                  <div className={styles.line}></div>
+                  <p>{product.qAval} Reviews</p>
+                </div>
+                <p>{product.descricao}</p>
+              </div>
+
+            </>
           ) : (
-            <p>Nenhum produto encontrado.</p> // Mensagem caso o produto não esteja disponível
+            <p>Carregando</p> // Mensagem caso o produto não esteja disponível
           )}
         </div>
       </main>
