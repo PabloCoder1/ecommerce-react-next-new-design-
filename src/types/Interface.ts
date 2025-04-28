@@ -49,3 +49,9 @@ export interface Popup {
     qAval: string;
     onClose: () => void;
 }
+
+export interface ResetPassword {
+  Email: string;
+  ResetCode: string;
+  NewPassword: string;
+}
